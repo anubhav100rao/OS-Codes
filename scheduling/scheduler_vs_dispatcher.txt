@@ -1,0 +1,11 @@
+Difference between scheduler and dispatcher
+
+
+* Consider a situation, where various processes are residing in the ready queue waiting to be executed.
+* The CPU cannot execute all of these processes simultaneously, so the operating system has to choose a
+*  particular process on the basis of the scheduling algorithm used. So, this procedure of selecting
+*  a process among various processes is done by the scheduler. Once the scheduler has selected a process
+*   from the queue, the dispatcher comes into the picture, and it is the dispatcher who takes that process
+*    from the ready queue and moves it into the running state. Therefore, the scheduler gives the dispatcher
+*     an ordered list of processes which the dispatcher moves to the CPU over time.
+

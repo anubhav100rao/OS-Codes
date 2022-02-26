@@ -1,0 +1,29 @@
+critical section problem
+
+void main() {
+    non_critical_section();
+
+    lock_critical_section();
+    critical_section();
+    unlock_critical_section();
+
+    non_critical_section();
+}
+
+process {
+    entry_critical_section(); // request critical section
+    critical_section();
+    exit_critical_section(); // release critical section
+
+    remainder_of_process();
+}
+
+requirements:
+1. Mutual exclusion:
+    only one process can access the critical section at a time
+2. Progressiveness:
+    no process can access the critical section before the previous process has exited the critical section
+3. Bounded waiting:
+    no process can wait for the critical section to be released for more than a fixed time
+4. No assumptions about the order in which processes enter the critical section
+5. No process outside the critical section can prevent a process from entering the critical section

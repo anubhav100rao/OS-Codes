@@ -1,0 +1,20 @@
+Race Condition
+
+consider
+
+p1 {
+    Read(a)
+    a = a * 2
+    Write(a)
+}
+
+p2 {
+    Read(a)
+    a = a + 5
+    Write(a)
+}
+
+suppose p1 and p2 are concurrent processes
+they are trying to access the same variable at same time
+this is called race condition: creates data inconsistency
+

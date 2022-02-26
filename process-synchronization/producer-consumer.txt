@@ -1,0 +1,42 @@
+int count = 0;
+void producer(void) {
+    int itemp;
+    while (1) {
+        while(count == buffer_size) {
+            printf("producer: buffer is full, waiting\n");
+            pthread_cond_wait();
+        }
+
+        producer_item(itemp);
+        buffer[index] = itemp;
+        index = (index + 1) % buffer_size;
+
+        count++;
+        printf("producer: %d\n", count);
+        sleep(1);
+    }
+}
+
+void consumer(void) {
+    int itemc;
+    while(true) {
+        while(count == 0) {
+            printf("consumer: buffer is empty, waiting\n");
+            pthread_cond_wait();
+        }
+        itemc = buffer(out);
+        out = (out + 1) % buffer_size;
+        count--;
+    }
+}
+
+void *producer_thread(void *arg) {
+    producer();
+}
+
+void *consumer_thread(void *arg) {
+    consumer();
+}
+
+
+produces data inconsistency
