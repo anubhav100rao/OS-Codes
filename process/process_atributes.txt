@@ -1,0 +1,30 @@
+1. Process Id:    A unique identifier assigned by the operating system
+2. Process State: Can be ready, running, etc.
+3. CPU registers: Like the Program Counter (CPU registers must be saved and 
+                  restored when a process is swapped in and out of CPU)
+5. Accounts information:
+6. I/O status information: For example, devices allocated to the process, 
+                           open files, etc
+8. CPU scheduling information: For example, Priority (Different processes 
+                               may have different priorities, for example
+                               a shorter process assigned high priority
+                               in the shortest job first scheduling)
+
+Every process has its own PCB (Process Control Bloack)
+        A process control block (PCB) is a data structure used by computer operating systems
+        to store all the information about a process. It is also known as a process descriptor.
+        When a process is created (initialized or installed), the operating system creates a corresponding
+        process control block.
+it includes the following information:
+1. Process identification (pid)
+2. Process data state
+3. Process Control
+    3.1 Process scheduling state
+    3.2 Process priority
+    3.3 Process CPU time
+    3.4 Process I/O time
+    3.5 Process memory size
+    3.6 Interprocess communication (IPC)
+    3.7 Process accounting information
+    3.8 Process I/O status information
+    3.9 memory management information

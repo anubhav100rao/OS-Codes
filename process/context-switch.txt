@@ -1,0 +1,16 @@
+Context Switch
+
+the process of saving the context of the current process and then restoring the context of the next process.
+it is like loading and unloading a program into the CPU.
+
+when does context switch happen ?
+
+1. When a high priority process is ready to run.
+2. An interupt occurs.
+3. A process is preempted.
+4. A process is blocked.
+5. A process is terminated.
+6. User and kernel mode switch.
+
+Context switch vs Mode switch:
+1. Mode switch occurs when a process is in user mode and wants to switch to kernel mode.

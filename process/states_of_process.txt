@@ -1,0 +1,9 @@
+States of process
+
+1. New (newly created process)
+2. Ready (process is ready to be executed)
+3. Running (process is executing)
+4. Blocked or Wait (process is blocked)
+5. Terminated or Completed (process is terminated)
+6. Suspended Ready (when ready queue becomes full, some processed are moved to suspended ready state)
+7. Suspended Block (when waiting queue becomes full)

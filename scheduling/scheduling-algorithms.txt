@@ -1,0 +1,13 @@
+Different scheduling algorithms
+1. FCFS (First Come First Serve)
+2. SJF (Shortest Job First)
+3. SRTF (Shortest Remaining Time First) preemptive version of SJF
+4. RR (Round Robin)
+5. Priority (Priority Scheduling)
+6. Preemptive Priority (Preemptive Priority Scheduling)
+7. Multilevel Queue Scheduling
+    processes are placed in multiple queues based on their priority
+    suffers starvation
+    convoy effect 🚒🚚🚛 🚲🚴🚲🚴🚲🚴🚲🚴
+8. Multilevel Feedback Queue (MLFQ)
+    sameas Multilevel Queue Scheduling but processes can switch between queues 💪💪💪

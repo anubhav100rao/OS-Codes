@@ -1,0 +1,21 @@
+Scheduling terms
+
+1. Arrival time: process arrived in ready queue
+2. Complete time: time at which process completed its execution
+3. Burst time: time required by cpu to execute a process
+4. Turnaround time: completion time - arrival time
+5. Waiting time: Turnaround time - Burst time
+6. Response time: First time when process gets the cpu
+
+Why do we need scheduling?
+    no starvation
+    maximum cpu utilization
+
+Objectives of cpu scheduling algorithm
+1. Max cpu utilization
+2. Minimum waiting time
+3. Minimum turn around time
+4. Minimum response time
+5. Minimum context switch time
+6. Max throughput
+7. Fair cpu scheduling (allocation)

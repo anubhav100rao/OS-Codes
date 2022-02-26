@@ -1,0 +1,18 @@
+Types of CPU schedulers:
+
+1. Long term scheduler:
+    makes decision about how many process should go in ready queue
+    it also determines the degree of multiprogramming
+2. Short term scheduler - Context Switching time:
+    it decides which process should be executed next
+    and then it calls the dispacher to switch the context
+    dispacher is repository of context switching
+3. Medium term - swapping time:
+    moving process from memory to disk
+
+
+
+
+Degree of multiprogramming
+
+the number of processes that are present in ready queue
