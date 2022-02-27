@@ -1,0 +1,30 @@
+Binary semaphore
+----------------------------------------------------------------------------------------------------------------------
+it is also known as mutex lock.
+it can have values 0 or 1.
+it is used to implement critical section problem.
+
+initialize the semaphore to 1.
+
+struct semaphore {
+    int value;
+    Queue *waiters;
+};
+
+down(struct semaphore *s) {
+    if (s.value == 1) {
+        s.value = 0
+    }
+    else {
+        enqueue(s.waiters, current_thread);
+        thread_block();
+    }
+}
+up(struct semaphore *s) {
+    if (s.waiters != NULL) {
+        thread_unblock(dequeue(s.waiters));
+    }
+    else {
+        s.value = 1;
+    }
+}
