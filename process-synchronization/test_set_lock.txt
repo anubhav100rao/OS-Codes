@@ -1,0 +1,13 @@
+Test and Set lock
+this is hardware solution
+
+entry_section(int process) {
+    mov Register #1
+    exchange reqister flag
+    while(reqister != 0) {
+        wait();
+    }
+}
+exit_section() {
+    flag = 0;
+}

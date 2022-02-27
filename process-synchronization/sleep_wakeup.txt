@@ -1,0 +1,40 @@
+Sleep and wake up solution
+----------------------------------------------------------------------------------------------------------------------
+
+int count = 0;
+int buffer_size = 20;
+
+void producer() {
+    int itemp, in = 0;
+    while(1) {
+        produce_item(itemp);
+        if(count == buffer_size) {
+            wait();
+        }
+        Buffer[in] = itemp;
+        in = (in + 1) % buffer_size;
+        count++;
+        if(count == 1) {
+            wakeup(consumer);
+        }
+    }
+}
+
+void consumer() {
+    int itemc, out = 0;
+    while(1) {
+        if(count == 0) {
+            wait();
+        }
+        itemc = Buffer[out];
+        out = (out + 1) % buffer_size;
+        count--;
+        if(count == buffer_size - 1) {
+            wakeup(producer);
+        }
+    }
+}
+
+problems with this solution:
+1. Deadlock
+2. Both consumer and producer can Sleep together

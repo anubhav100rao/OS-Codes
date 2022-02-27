@@ -1,0 +1,17 @@
+Disabling Interupts
+
+while entring the critical_section disable interupts
+and enable during exit_section
+
+entry_section() {
+    disable_interupts();
+}
+
+critical_section();
+
+exit_section() {
+    enable_interupts();
+}
+
+problems of this solution:
+1. Disabling interupts is very bad.

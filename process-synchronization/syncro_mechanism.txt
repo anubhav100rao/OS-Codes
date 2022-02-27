@@ -1,4 +1,5 @@
 process synchronization mechanism
+software type
 
 void peterson_solution() {
     do {
@@ -11,3 +12,20 @@ void peterson_solution() {
         remainder_section();
     } while(true);
 }
+
+
+hardware synchronization mechanism
+    test and set lock   (TSL)
+
+OS synchronization mechanism
+    semaphore
+        counting semaphore and binary semaphore
+
+Programming language (compiler) synchronization mechanism
+    Monitor
+
+
+Mutual exclusion with busy waiting
+    spin lock
+Mutual exclusion without busy waiting
+    blocking lock

@@ -1,0 +1,34 @@
+SEMAPHORE
+----------------------------------------------------------------------------------------------------------------------
+
+semaphore is an interger variable.
+types:
+1. binary semaphore
+2. counting semaphore
+
+properties:
+1. takes only integer values
+2. operations are atomic i.e. no preemption occurs
+3. semaphore is a resource
+4. semaphore is a synchronization mechanism
+" mutual exclusion without busy waiting solution " 🔥🔥🔥🔥🔥🔥🔥🔥
+
+
+struct semaphore {
+    int value;
+    Queue *waiters;
+}
+Down(struct semaphore s) {
+    s.value--;
+    if (s.value < 0) {
+        *waiters.push(s);
+        block();
+    }
+}
+Up(struct semaphore s) {
+    s.value++;
+    if (s.value <= 0) {
+        struct semaphore s = *waiters.pop();
+        unblock(s);
+    }
+}

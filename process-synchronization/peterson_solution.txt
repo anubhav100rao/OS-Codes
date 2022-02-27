@@ -1,0 +1,23 @@
+Peterson's solution or Decker's solution
+only for two processes
+
+#define N 2
+#define True 1
+#define False 0
+int turn = 0;
+int intrested[N] = False;
+void entry_section(process) {
+    int other = 1 - process;
+    intrested[process] = True;
+    turn = process;
+    while(intrested[other] == True && turn == process) {
+        wait();
+    }
+}
+critical_section();
+exit_section(process) {
+    intrested[process] = False;
+}
+
+problems with Peterson's solution:
+1. if two processes are waiting for the same section, they will wait forever
