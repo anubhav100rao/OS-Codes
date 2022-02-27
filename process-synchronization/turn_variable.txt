@@ -1,0 +1,28 @@
+Strict Iteration or Turn variable
+
+// only 2 process solution
+
+process_1() {
+    while(true) {
+        non_critical_code();
+        while(turn != 1) {
+            wait();
+        }
+        turn = 0;
+    }
+}
+
+process_0() {
+    while(true) {
+        non_critical_code();
+        while(turn != 0) {
+            wait();
+        }
+        turn = 1;   
+    }
+}
+
+problems of this solution:
+1. if there is a deadlock, the program will be stuck in the while(true) loop
+2. intrested process will be stuck in the while(true) loop
+3. No progress will be made 💦💦

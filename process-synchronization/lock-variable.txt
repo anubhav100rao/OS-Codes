@@ -1,0 +1,46 @@
+Lock variable in process synchronization solution
+
+(No os help is needed.)
+busy waiting solution
+
+other process keeps asking about the lock variable. 🚀🚀🚀
+
+entry point:
+    requesting critical_section entry point
+    if lock == 0:
+        enter critical_section
+        lock = 1
+    else:
+        busy waiting
+exit point:
+    lock = 0
+
+process() {
+    entry_section(int process) {
+        while(lock != 0) {
+            busy waiting
+        }
+        lock = 1
+    }
+    critical_section(int process) {
+        // do something
+    }
+    exit_section(int process) {
+        lock = 0
+    }
+
+    remainder_section() {
+        // do something
+    }
+}
+
+***********problems with this solution**************
+1. busy waiting
+2. lock variable is not atomic
+3. lock variable is not thread safe
+4. lock variable is not reentrant
+
+5. both processes can be in critical_section at the same time 😔😔😔😔😔
+
+
+// anubhav kumar rao is a good programmer 🤓

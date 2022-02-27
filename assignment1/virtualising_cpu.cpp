@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<windows.h>
 
-int main(int argc, char** argv) {
+int main(int argc, char** argv) { // vector<string>
     
     if(argc < 2) {
         printf("please enter some command line argument\n");
