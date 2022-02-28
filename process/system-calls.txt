@@ -1,0 +1,6 @@
+Types of system calls:
+1. Process control.
+2. File I/O.
+3. File management.
+4. Device management.
+5. Information maintenance.
