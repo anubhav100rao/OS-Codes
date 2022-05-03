@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
         return -1 on signal interrupt
 
     */
-    int sz = write(fd, "ONLINE C3 bhi hona chahiye\n", strlen("ONLINE C3 bhi hona chahiye\n"));
+    int sz = write(fd, "Random Write statement\n", strlen("Random Write statement\n"));
 
     printf("status of write descriptor %d\n", sz);
     

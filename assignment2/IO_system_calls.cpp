@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     */
     char *c = (char*) calloc(4000, sizeof(char));
     int size_bytes = read(fd, c, 4000);
-    printf("size_readed %d\n", size_bytes);
+    // printf("size_readed %d\n", size_bytes);
 
     printf("%s\n", c);
     

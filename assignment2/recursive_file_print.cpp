@@ -39,23 +39,23 @@ void listFilesRecursively(char *basePath)
     closedir(dir);
 }
 
-void listFiles(const char *path)
-{
-    struct dirent *dp;
-    DIR *dir = opendir(path);
+// void listFiles(const char *path)
+// {
+//     struct dirent *dp;
+//     DIR *dir = opendir(path);
 
-    // Unable to open directory stream
-    if (!dir) 
-        return; 
+//     // Unable to open directory stream
+//     if (!dir) 
+//         return; 
 
-    while ((dp = readdir(dir)) != NULL)
-    {
-        printf("%s\n", dp->d_name);
-    }
+//     while ((dp = readdir(dir)) != NULL)
+//     {
+//         printf("%s\n", dp->d_name);
+//     }
 
-    // Close directory stream
-    closedir(dir);
-}
+//     // Close directory stream
+//     closedir(dir);
+// }
 
 int main(int argc, char *argv[])
 {
@@ -72,7 +72,7 @@ int main(int argc, char *argv[])
   
     // closedir(dr); 
     
-    char path[100] = ".";
+    char path[100] = "../sac";
 
     // Input path from user
     // printf("Enter path to list files: ");
